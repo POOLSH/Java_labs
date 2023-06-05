@@ -42,7 +42,7 @@ class ConvertAllServiceTest {
             AngleEntity actual = result.get(i);
             assertEquals(expected.getDegree(), actual.getDegree());
             assertEquals(expected.getRads(), actual.getRads());
-            Mockito.verify(angleRepository, Mockito.times(1)).save(Mockito.any(AngleEntity.class));
+            Mockito.verify(angleRepository, Mockito.times(3)).save(Mockito.any(AngleEntity.class));
         }
     }
 }
